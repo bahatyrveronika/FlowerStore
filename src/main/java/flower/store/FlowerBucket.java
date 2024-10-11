@@ -10,12 +10,25 @@ import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public class FlowerBucket {
+    /**
+     * list FlowerPacks.
+     */
     private List<FlowerPack> flowerPacks = new ArrayList<>();
 
-    public void add(FlowerPack pack) {
+    /**
+    adds one pack.
+     *
+     * @param pack pack
+     */
+    public void add(final FlowerPack pack) {
         this.flowerPacks.add(pack);
     }
 
+    /**
+     * total price of the flower packs.
+     *
+     * @return total price of all flower packs.
+     */
     public double getPrice() {
         return flowerPacks.stream()
             .mapToDouble(FlowerPack::getPrice)

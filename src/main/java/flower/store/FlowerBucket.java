@@ -2,7 +2,6 @@ package flower.store;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

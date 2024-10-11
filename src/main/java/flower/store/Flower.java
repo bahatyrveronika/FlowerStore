@@ -16,7 +16,8 @@ public class Flower {
     @Getter
     private FlowerType flowerType;
 
-    public Flower(double sepalLength, FlowerColor color, double price, FlowerType flowerType) {
+    public Flower(double sepalLength, FlowerColor color,
+        double price, FlowerType flowerType) {
         this.sepalLength = sepalLength;
         this.color = color;
         this.price = price;
@@ -27,8 +28,8 @@ public class Flower {
         return this.price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setPrice(double p) {
+        this.price = p;
     }
     
     public String getColor() {

@@ -14,10 +14,10 @@ public class FlowerPackTest {
     private static final double DELTA = 0.01;
     private static final double CHAMOMILE_SEPAL_LENGTH = 10.0;
     private static final double CHAMOMILE_PRICE = 3.0;
-    private static final double TULIP_SEPAL_LENGTH_2 = 6.0;
-    private static final double TULIP_PRICE_2 = 4.0;
-    private static final double ROSE_SEPAL_LENGTH_2 = 10.0;
-    private static final double ROSE_PRICE_2 = 5.0;
+    private static final double TULIP_SEPAL_LENGTH_TWO = 6.0;
+    private static final double TULIP_PRICE_TWO = 4.0;
+    private static final double ROSE_SEPAL_LENGTH_TWO = 10.0;
+    private static final double ROSE_PRICE_TWO = 5.0;
     private static final int PACK_QUANTITY = 5;
 
     @Test
@@ -30,7 +30,8 @@ public class FlowerPackTest {
 
     @Test
     public void testGetPrice() {
-        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH, FlowerColor.BLUE, TULIP_PRICE);
+        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH,
+        FlowerColor.BLUE, TULIP_PRICE);
         FlowerPack pack = new FlowerPack(tulip, PACK_QUANTITY);
         double expectedPrice = TULIP_PRICE * PACK_QUANTITY;
         Assertions.assertEquals(expectedPrice, pack.getPrice(), DELTA);
@@ -47,10 +48,10 @@ public class FlowerPackTest {
 
     @Test
     public void testSetFlower() {
-        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH_2, FlowerColor.RED,
-                TULIP_PRICE_2);
-        Flower rose = new Rose(ROSE_SEPAL_LENGTH_2, FlowerColor.RED,
-                ROSE_PRICE_2);
+        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH_TWO, FlowerColor.RED,
+                TULIP_PRICE_TWO);
+        Flower rose = new Rose(ROSE_SEPAL_LENGTH_TWO, FlowerColor.RED,
+                ROSE_PRICE_TWO);
         FlowerPack pack = new FlowerPack(tulip, PACK_QUANTITY);
         pack.setFlower(rose);
         Assertions.assertEquals(rose, pack.getFlower());

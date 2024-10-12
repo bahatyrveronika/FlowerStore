@@ -19,7 +19,8 @@ public class StoreTest {
         Store store = new Store();
 
         Flower rose = new Rose(ROSE_SEPAL_LENGTH, FlowerColor.RED, ROSE_PRICE);
-        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH, FlowerColor.RED, TULIP_PRICE);
+        Flower tulip = new Tulip(TULIP_SEPAL_LENGTH,
+        FlowerColor.RED, TULIP_PRICE);
 
         FlowerPack rosePack = new FlowerPack(rose, ROSE_QUANTITY);
         FlowerPack tulipPack = new FlowerPack(tulip, TULIP_QUANTITY);
